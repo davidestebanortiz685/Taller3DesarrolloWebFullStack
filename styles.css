@@ -13,14 +13,14 @@
     transition: transform 0.3s ease; 
 }
 .h1{
-    width : 1000px;
-    font-family: Arial,;
-
+    width: 100%;
+    max-width: 1000px;
+    font-family: Arial;
 }
 .h2{
-    width : 500px;
-    font-family: Arial, ;
-
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial;
 }
 .Texto{
     font-size: 18px ;
@@ -53,7 +53,6 @@ header{
     background-color: rgb(218, 213, 153);
     border-radius: 8px;
     padding: 10px;
-    margin-right: 500px;
 
 }
 footer {  
@@ -103,33 +102,39 @@ body {
     justify-content: center;
 
 }
-@media (max-width: 600px) {  
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
 
-  body {  
+    header {
+        padding: 15px;
+        margin-right: 0; /* ← anula el margen fijo */
+    }
 
-    padding: 10px;  
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  }  
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
 
-  
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-  header {  
-
-    padding: 15px;  
-
-  }  
-  
-  .nav-links {  
-
-    flex-direction: column;  
-
-    gap: 10px;  
-
-  }  
-
-  
-
+    .classimage {
+        width: 100%; /* en móvil ocupa todo el ancho */
+    }
 }
+  
+
+
 
 .enlaces:hover {  
 
